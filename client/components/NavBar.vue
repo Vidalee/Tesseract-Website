@@ -2,8 +2,9 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="../">
-          <img src="/Tesseract_logo.png" alt="Logo">
+        <a class="navbar-item" href="/">
+          <img src="/logo.png" alt="Logo">
+          TESSERACT
         </a>
         <span class="navbar-burger burger" data-target="navbarMenu">
           <span />
@@ -14,40 +15,29 @@
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item is-active">
-            Home
+            Accueil
           </a>
           <a class="navbar-item">
-            Examples
+            Classement
           </a>
           <a class="navbar-item">
-            Features
+            Télécharger le jeu
           </a>
-          <a class="navbar-item">
-            Team
-          </a>
-          <a class="navbar-item">
-            Archives
-          </a>
-          <a class="navbar-item">
-            Help
-          </a>
+
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
-              Account
+              Compte
             </a>
             <div class="navbar-dropdown">
               <a class="navbar-item">
-                Dashboard
+                Profil
               </a>
               <a class="navbar-item">
-                Profile
-              </a>
-              <a class="navbar-item">
-                Settings
+                Paramètres
               </a>
               <hr class="navbar-divider">
               <div class="navbar-item">
-                Logout
+                Se déconnecter
               </div>
             </div>
           </div>
@@ -60,6 +50,3 @@
 <script>
 export default {}
 </script>
-
-<style>
-</style>

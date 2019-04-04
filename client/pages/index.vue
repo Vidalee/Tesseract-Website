@@ -1,37 +1,69 @@
 <template>
-  <section class="hero is-info is-fullheight">
-    <Header />
-    <Search />
-  </section>
+  <div>
+    <title>
+      tesseract
+    </title>
+    <NavBar />
+    <div class="container">
+      <div class="section">
+        <img src="tesseract.png">
+        <Search />
+        <!-- Developers -->
+        <div class="row columns">
+          <div v-for="info in devInfos" :key="info.name" class="column">
+            <DevCard :json="info" />
+          </div>
+        </div>
+        <!-- End Developers -->
+        <Progression />
+        <Ressources />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Header from '~/components/Header'
+import NavBar from '~/components/NavBar'
 import Search from '~/components/Search'
+import DevCard from '~/components/DevCard'
+import Progression from '~/components/Progression'
+import Ressources from '~/components/Ressources'
+const devInfos = require('@/data/devInfos.json')
 
 export default {
   components: {
-    Header,
-    Search
+    NavBar,
+    Search,
+    DevCard,
+    Progression,
+    Ressources
+  },
+  data: function() {
+    return {
+      devInfos
+    }
+  },
+  head() {
+    return {
+      title: 'Tesseract',
+      meta: [
+        {
+          hid: 'title',
+          name: 'og:title',
+          content: 'Tesseract'
+        },
+        {
+          hid: 'description',
+          name: 'og:description',
+          content: 'Rogue-like vraiment super !!'
+        },
+        {
+          hid: 'image',
+          name: 'og:image',
+          content: 'http://tesseract-game.net/logo.png'
+        }
+      ]
+    }
   }
 }
 </script>
-
-<style>
-.hero.is-info {
-  background: #151b27;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.hero .nav,
-.hero.is-success .nav {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.hero .subtitle {
-  padding: 3rem 0;
-  line-height: 1.5;
-}
-</style>

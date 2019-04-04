@@ -17,8 +17,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        type: 'text',
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+        href:
+          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        crossorigin: 'anonymous'
       }
     ]
   },
@@ -50,7 +51,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: 'http://localhost:3001/api'
+    baseURL: 'http://localhost:3001'
     // See https://github.com/nuxt-community/axios-module#options
   },
 

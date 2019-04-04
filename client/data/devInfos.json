@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Thomas",
+    "icon": "vivi.png",
+    "tag": "Vivi",
+    "role": "Chef de projet",
+    "message": "Je suis chargé de donner une direction principale au projet, ainsi que de toute la partie réseau, que ce soit du jeu, de la messagerie ou du site web. J'aide Eliès sur les interfaces et William sur les mécaniques de jeu."
+  },
+  {
+    "name": "William",
+    "icon": "turtle.jpg",
+    "tag": "TurtleSmoke",
+    "role": "Tortue Anonyme",
+    "message": "Je suis chargé de la majeure partie du code sur Unity, que ce soit la génération de la carte, la création de l'intelligence artificielle ou encore les textures et les objets !"
+  },
+  {
+    "name": "Adrien",
+    "icon": "adrien.jpg",
+    "tag": "DreamExe",
+    "role": "Développeur",
+    "message": "Je suis chargé de l'implémentation de l'IA et de la création des objets. Je participe aussi à la génération de la carte et au développement de la partie réseau."
+  },
+  {
+    "name": "Eliès",
+    "icon": "elies.jpg",
+    "tag": "e-Niem",
+    "role": "Développeur",
+    "message": "Ma mission lors de ce projet est de réaliser les designs du jeu. Des décors aux personnages, en passant par l’ATH et les animations, j’userai de ma créativité et mon imagination pour créer l’univers mystérieux de Tesseract."
+  }
+]

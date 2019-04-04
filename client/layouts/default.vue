@@ -9,10 +9,3 @@
 <script>
 export default {}
 </script>
-
-<style>
-html,
-body {
-  font-family: 'Open Sans', serif;
-}
-</style>

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iFonny/WebCrawler/issues"
   },
-  "homepage": "https://github.com/iFonny/WebCrawler#readme"
+  "homepage": "https://github.com/iFonny/WebCrawler#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
