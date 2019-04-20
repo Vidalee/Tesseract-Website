@@ -95,7 +95,7 @@ module.exports = [
   {
     method: "Get",
     path: "/u/o/{username}/{authority}",
-    handler: handlers.register
+    handler: handlers.setAuthority
     //  config: registerConfig
   }
 ];
