@@ -29,7 +29,7 @@ module.exports = {
         .db("tesseract")
         .table("users")
         .filter({ username: request.params.username })
-        .update({ authority: request.params.authority })
+        .update({ authority: parseInt(request.params.authority) })
         .run()
         .then(function(response) {
           resolve("o/");
