@@ -4,6 +4,10 @@
   "description": "Tesseract's Website",
   "author": "Thomas Sivent",
   "private": true,
+  "nuxt": {
+    "host": "0.0.0.0",
+    "port": "42042"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
