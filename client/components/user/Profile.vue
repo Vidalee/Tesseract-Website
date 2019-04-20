@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     getIconPath: function() {
-      console.log(this.json)
       const str = 'https://cdn.communitydragon.org/latest/profile-icon/' + 23
       return str
     }
