@@ -23,7 +23,7 @@
           <a class="navbar-item">
             Télécharger le jeu
           </a-->
-          <nuxt-link to="register" class="navbar-item">
+          <nuxt-link to="/register" class="navbar-item">
             Créer un compte
           </nuxt-link>
           <!--div class="navbar-item has-dropdown is-hoverable">
