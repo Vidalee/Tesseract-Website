@@ -1,8 +1,8 @@
 {
-  "name": "webcrawler",
+  "name": "Tesseract",
   "version": "1.0.0",
-  "description": "Web Crawler Application​ with Vue.JS + NodeJS and MongoDB.",
-  "author": "Nicolas Thouchkaieff",
+  "description": "Tesseract's Website",
+  "author": "Thomas Sivent",
   "private": true,
   "scripts": {
     "dev": "nuxt",

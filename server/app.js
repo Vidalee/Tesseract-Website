@@ -23,10 +23,7 @@ console.log(`Server running at: ${server.info.uri}`);
 const start = async function() {
   try {
     await server.register({
-      plugin: require("hapi-cors"),
-      options: {
-        origins: ["http://localhost:3000"]
-      }
+      plugin: require("hapi-cors")
     });
 
     await server.start();

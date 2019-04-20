@@ -13,6 +13,14 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
+    script: [
+      {
+        src: '/fa.js'
+      } /*,
+      {
+        src: '/bulma.js'
+      } */
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -27,7 +35,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#00ff00' },
+  loading: { color: '#8c67ef' },
 
   /*
   ** Global CSS
@@ -51,7 +59,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: 'http://localhost:3001'
+    baseURL: 'http://api.tesseract-game.net'
     // See https://github.com/nuxt-community/axios-module#options
   },
 

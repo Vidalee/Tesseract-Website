@@ -3,9 +3,19 @@
     <div class="profile-banner">
       <br><br><br><br><br>
       <h1 class="title is-1">
-        {{ json.name }}
-        <span class="tag is-primary">
+        {{ json.username }}
+        <br>
+        <span v-if="json.authority === 7" class="tag is-primary">
           Admin
+        </span>
+        <span v-if="json.authority === 3" class="tag is-dark">
+          Moderator
+        </span>
+        <span v-if="json.online" class="tag is-success">
+          Online
+        </span>
+        <span v-else class="tag is-light">
+          Offline
         </span>
       </h1>
     </div>
@@ -26,9 +36,8 @@ export default {
   },
   methods: {
     getIconPath: function() {
-      const str =
-        'https://cdn.communitydragon.org/latest/profile-icon/' +
-        this.json.iconId
+      console.log(this.json)
+      const str = 'https://cdn.communitydragon.org/latest/profile-icon/' + 1112
       return str
     }
   },
@@ -44,7 +53,7 @@ export default {
         {
           hid: 'description',
           name: 'og:description',
-          content: 'Profil de ' + this.json.name
+          content: 'Profil de ' + this.json.username
         },
         {
           hid: 'image',

@@ -1,11 +1,10 @@
 <template>
-  <div class="b ox">
+  <div class="box">
     <b-field>
       <b-autocomplete
         v-model="name"
         rounded
         :data="filteredDataArray"
-        :loading="loading"
         placeholder="Chercher un joueur"
         icon="magnify"
         @select="select"
@@ -19,15 +18,15 @@
 </template>
 
 <script>
-let data = require('@/data/players.json')
-let loading = true
 export default {
   props: {
-    loading
+    data: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {
-      data,
       name: '',
       selected: null
     }
@@ -43,16 +42,6 @@ export default {
         )
       })
     }
-  },
-  mounted() {
-    this.$axios
-      .$get(this.$axios.defaults.baseURL + '/u/list')
-      .then(function(response) {
-        data = response
-        console.log(response)
-        console.log(data)
-        if (loading) loading = false
-      })
   },
   methods: {
     select: function(name) {

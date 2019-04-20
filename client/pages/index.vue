@@ -7,7 +7,9 @@
     <div class="container">
       <div class="section">
         <img src="tesseract.png">
-        <Search />
+        <br>
+        <Search :data="players" />
+        <br>
         <!-- Developers -->
         <div class="row columns">
           <div v-for="info in devInfos" :key="info.name" class="column">
@@ -40,7 +42,16 @@ export default {
   },
   data: function() {
     return {
-      devInfos
+      devInfos,
+      players: []
+    }
+  },
+  async asyncData({ app, store, params }) {
+    const searchRes = await app.$axios.get(
+      app.$axios.defaults.baseURL + '/u/list'
+    )
+    return {
+      players: searchRes.data
     }
   },
   head() {

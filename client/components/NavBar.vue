@@ -2,10 +2,10 @@
   <nav class="navbar">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <nuxt-link to="/" class="navbar-item">
           <img src="/logo.png" alt="Logo">
           TESSERACT
-        </a>
+        </nuxt-link>
         <span class="navbar-burger burger" data-target="navbarMenu">
           <span />
           <span />
@@ -14,17 +14,19 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active">
+          <nuxt-link to="/" class="navbar-item is-active">
             Accueil
-          </a>
-          <a class="navbar-item">
+          </nuxt-link>
+          <!--a class="navbar-item">
             Classement
           </a>
           <a class="navbar-item">
             Télécharger le jeu
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
+          </a-->
+          <nuxt-link to="register" class="navbar-item">
+            Créer un compte
+          </nuxt-link>
+          <!--div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Compte
             </a>
@@ -40,7 +42,7 @@
                 Se déconnecter
               </div>
             </div>
-          </div>
+          </div-->
         </div>
       </div>
     </div>

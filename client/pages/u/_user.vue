@@ -3,7 +3,7 @@
     <NavBar />
     <div class="container">
       <div class="section">
-        <Search />
+        <Search :data="players" />
         <Profile :json="summoner" />
       </div>
     </div>
@@ -29,10 +29,20 @@ export default {
   },
   data: function() {
     return {
-      summoner: {
-        iconId: '1114',
-        name: 'Vivi'
-      }
+      summoner: {},
+      players: []
+    }
+  },
+  async asyncData({ app, store, params }) {
+    const searchRes = await app.$axios.get(
+      app.$axios.defaults.baseURL + '/u/list'
+    )
+    const userRes = await app.$axios.get(
+      app.$axios.defaults.baseURL + '/u/by-name/' + params.user
+    )
+    return {
+      players: searchRes.data,
+      summoner: userRes.data
     }
   }
 }

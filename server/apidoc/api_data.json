@@ -26,14 +26,14 @@
             "type": "JSON",
             "optional": false,
             "field": "User",
-            "description": "<p>object.</p>"
+            "description": "<p>User object.</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n    \"authority\": 7 ,\n    \"id\":  \"56fb5d71-4a98-4032-ab91-6f0de963168c\" ,\n    \"password\":  \"password\" ,\n    \"username\":  \"username\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    \"authority\": 7 ,\n    \"id\":  \"56fb5d71-4a98-4032-ab91-6f0de963168c\" ,\n    \"username\":  \"username\"\n}",
           "type": "json"
         }
       ]
@@ -64,6 +64,48 @@
         {
           "title": "Success-Response:",
           "content": "HTTP/1.1 200 OK\n['username1', 'username2', 'username3']",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routes/user.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "post",
+    "url": "/u/register",
+    "title": "Register a new user",
+    "name": "Post_Player_Register",
+    "group": "User",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Text",
+            "optional": false,
+            "field": "Success",
+            "description": "<p>Success message.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Text",
+            "optional": false,
+            "field": "Failure",
+            "description": "<p>Failure message.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\nSuccess",
+          "type": "json"
+        },
+        {
+          "title": "Failure-Response:",
+          "content": "HTTP/1.1 200 OK\nUsername already taken",
           "type": "json"
         }
       ]

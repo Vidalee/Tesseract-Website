@@ -24,6 +24,9 @@
     <a href="https://nodejs.org">
       Node.js
     </a><br>
+    <a href="https://fr.nuxtjs.org/">
+      Vue &amp; Nuxt
+    </a><br>
   </div>
 </template>
 
