@@ -57,12 +57,12 @@ module.exports = {
       request.payload.username === undefined ||
       request.payload.password === undefined
     )
-      resolve(Boom.notFound("Bad payload, it's too big onii-chan >///<"));
+      resolve(Boom.notFound("Bad payload"));
     return new Promise(resolve => {
       main.r
         .db("tesseract")
         .table("users")
-        .filter({ username: request.payload.username })
+        .filter({ l_username: request.payload.username.toLowerCase() })
         .run()
         .then(function(response) {
           if (response.length != 0) {
@@ -72,6 +72,7 @@ module.exports = {
               .db("tesseract")
               .table("users")
               .insert({
+                l_username: request.payload.username.toLowerCase(),
                 username: request.payload.username,
                 password: crypto
                   .createHash("sha256")
