@@ -15,7 +15,7 @@ exports.r = r;
 
 const server = Hapi.server({
   port: 3001,
-  host: "localhost"
+  host: "api.tesseract-game.net"
 });
 server.route(routes);
 console.log(`Server running at: ${server.info.uri}`);
