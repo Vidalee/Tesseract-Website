@@ -25,7 +25,7 @@ const start = async function() {
     await server.register({
       plugin: require("hapi-cors"),
       options: {
-        origins: ["http://tesserac-game.net"]
+        origins: ["http://tesseract-game.net"]
       }
     });
 

@@ -59,7 +59,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    baseURL: 'http://api.tesseract-game.net'
+    baseURL: 'http://api.tesseract-game.net:3001'
     // See https://github.com/nuxt-community/axios-module#options
   },
 

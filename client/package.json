@@ -19,7 +19,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.3.4",
+    "nuxt": "^2.6.2",
     "nuxt-buefy": "^0.3.2",
     "yarn": "^1.13.0"
   },
