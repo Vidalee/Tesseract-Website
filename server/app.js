@@ -23,7 +23,10 @@ console.log(`Server running at: ${server.info.uri}`);
 const start = async function() {
   try {
     await server.register({
-      plugin: require("hapi-cors")
+      plugin: require("hapi-cors"),
+      options: {
+        origins: ["http://tesserac-game.net"]
+      }
     });
 
     await server.start();
