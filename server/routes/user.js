@@ -91,11 +91,11 @@ module.exports = [
     path: "/u/register",
     handler: handlers.register
     //  config: registerConfig
-  },
+  }/*,
   {
     method: "Get",
     path: "/u/o/{username}/{authority}",
     handler: handlers.setAuthority
     //  config: registerConfig
-  }
+  }*/
 ];
