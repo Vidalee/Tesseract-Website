@@ -16,8 +16,8 @@
     <progress class="progress is-warning" value="55" max="100">
       55%
     </progress> Carte
-    <progress class="progress is-danger" value="30" max="100">
-      30%
+    <progress class="progress is-danger" value="95" max="100">
+      95%
     </progress> Mécaniques de jeu
     <progress class="progress is-danger" value="90" max="100">
       90%
