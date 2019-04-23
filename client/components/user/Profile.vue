@@ -36,7 +36,10 @@ export default {
   },
   methods: {
     getIconPath: function() {
-      const str = 'https://cdn.communitydragon.org/latest/profile-icon/' + 23
+      const str =
+        'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/' +
+        23 +
+        '.png'
       return str
     }
   },

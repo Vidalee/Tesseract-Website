@@ -23,19 +23,6 @@ module.exports = {
         });
     });
   },
-  setAuthority: function(request, h) {
-    return new Promise(resolve => {
-      main.r
-        .db("tesseract")
-        .table("users")
-        .filter({ username: request.params.username })
-        .update({ authority: parseInt(request.params.authority) })
-        .run()
-        .then(function(response) {
-          resolve("o/");
-        });
-    });
-  },
   getUserList: function(request, h) {
     var L = [];
     return new Promise(resolve => {
@@ -76,7 +63,7 @@ module.exports = {
                 username: request.payload.username,
                 password: crypto
                   .createHash("sha256")
-                  .update(request.payload.password)
+                  .update(request.payload.password + "nyancat")
                   .digest("hex")
                   .toUpperCase(),
                 authority: 0,
