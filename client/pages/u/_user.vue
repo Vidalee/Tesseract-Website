@@ -4,7 +4,7 @@
     <div class="container">
       <div class="section">
         <Search :data="players" />
-        <Profile :json="summoner" />
+        <Profile :json="summoner" :scores="scores" />
       </div>
     </div>
   </div>
@@ -21,7 +21,6 @@ export default {
   validate({ params }) {
     return params.user !== undefined
   },
-
   components: {
     NavBar,
     Search,
@@ -30,7 +29,8 @@ export default {
   data: function() {
     return {
       summoner: {},
-      players: []
+      players: [],
+      scores: []
     }
   },
   async asyncData({ app, store, params }) {
@@ -40,9 +40,13 @@ export default {
     const userRes = await app.$axios.get(
       app.$axios.defaults.baseURL + '/u/by-name/' + params.user
     )
+    const scoresRes = await app.$axios.get(
+      app.$axios.defaults.baseURL + '/scores/' + params.user
+    )
     return {
       players: searchRes.data,
-      summoner: userRes.data
+      summoner: userRes.data,
+      scores: scoresRes.data
     }
   }
 }

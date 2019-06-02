@@ -6,7 +6,7 @@ var handlers = require("../handlers/userHandlers");
  * @apiName Get Player
  * @apiGroup User
  *
- * @apiParam {string} username username of the player.
+ * @apiParam {string} username Username of the player.
  *
  * @apiSuccess {JSON} User User object.
  * @apiSuccessExample {json} Success-Response:
@@ -91,7 +91,7 @@ module.exports = [
     path: "/u/register",
     handler: handlers.register
     //  config: registerConfig
-  }/*,
+  } /*,
   {
     method: "Get",
     path: "/u/o/{username}/{authority}",

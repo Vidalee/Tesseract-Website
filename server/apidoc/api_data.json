@@ -1,6 +1,49 @@
 [
   {
     "type": "get",
+    "url": "/scores/:username",
+    "title": "Request Scores of a player",
+    "name": "Get_Player",
+    "group": "Scores",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "username",
+            "description": "<p>Username of the player.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "JSON",
+            "optional": false,
+            "field": "List",
+            "description": "<p>List of Score objects.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[{\n      \"time\": 2 ,\n      \"u1\":  \"Joueur_A\" ,\n      \"u2\":  \"Neo\" ,\n      \"u3\":  \"\" ,\n      \"u4\":  \"\" ,\n      \"when\": 1559509324\n    }]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routes/scores.js",
+    "groupTitle": "Scores"
+  },
+  {
+    "type": "get",
     "url": "/u/by-name/:username",
     "title": "Request Player Information",
     "name": "Get_Player",
@@ -13,7 +56,7 @@
             "type": "string",
             "optional": false,
             "field": "username",
-            "description": "<p>username of the player.</p>"
+            "description": "<p>Username of the player.</p>"
           }
         ]
       }

@@ -26,6 +26,10 @@
           <nuxt-link to="/register" class="navbar-item">
             Créer un compte
           </nuxt-link>
+          <a href="/Rapport_Soutenance_Convexe_3_4.pdf" class="navbar-item">
+            Rapport de Soutenance
+          </a>
+
           <!--div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Compte

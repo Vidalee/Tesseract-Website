@@ -67,7 +67,8 @@ module.exports = {
                   .digest("hex")
                   .toUpperCase(),
                 authority: 0,
-                online: false
+                online: false,
+                icon: Math.random() * (1000 - 3) + 3
               })
               .then(function(response) {
                 resolve("Success");

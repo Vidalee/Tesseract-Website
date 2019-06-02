@@ -23,22 +23,42 @@
       <img class="rounded profile-icon" :src="getIconPath()">
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div v-if="scores.length != 0">
+      Parties récentes
+      <div v-for="score in scores" :key="score.id" style="text-align: center">
+        <Score :json="score" />
+      </div>
+      <br><br><br>
+    </div>
+    <div v-else>
+      Aucune partie récente.
+    </div>
   </article>
 </template>
 
 <script>
+import Score from '~/components/user/Score'
+
 export default {
+  components: {
+    Score
+  },
   props: {
     json: {
       type: Object,
+      required: true
+    },
+    scores: {
+      type: Array,
       required: true
     }
   },
   methods: {
     getIconPath: function() {
+      console.log(this.json)
       const str =
         'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/' +
-        23 +
+        this.json.icon +
         '.png'
       return str
     }

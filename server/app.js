@@ -15,7 +15,12 @@ exports.r = r;
 
 const server = Hapi.server({
   port: 3001,
-  host: "api.tesseract-game.net"
+  host: "127.0.0.1",
+  routes: {
+    cors: {
+      origin: ["*"]
+    }
+  }
 });
 server.route(routes);
 console.log(`Server running at: ${server.info.uri}`);
@@ -25,7 +30,7 @@ const start = async function() {
     await server.register({
       plugin: require("hapi-cors"),
       options: {
-        origins: ["http://tesseract-game.net"]
+        origins: ["*"]
       }
     });
 
