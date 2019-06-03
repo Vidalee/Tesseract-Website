@@ -3,31 +3,29 @@ const r = require("rethinkdbdash")({
   host: "localhost"
 });
 
-r.dbCreate("tesseract").run();
-r.db("tesseract")
-  .tableCreate("users")
+//r.dbCreate("tesseract").run();
+/*r.db("tesseract")
+//  .tableCreate("users")
   .tableCreate("scores")
   .run();
-
-var obj = [
+*/
+/*var obj = [
   {
-    id: "66f5dc57-52d0-4c8c-a1e4-10c1cea50f41",
-    seed: 777,
-    time: 2,
-    u1: "Kira",
-    u2: "Neo",
-    u3: "",
+    seed: 42,
+    time: 1234,
+    u1: "Vivi",
+    u2: "TurtleSmoke",
+    u3: "Framboise",
     u4: "",
     when: 1559509324
   },
   {
-    id: "6658b7df-de2e-4387-b62e-68011ae3d7c8",
     seed: 777,
-    time: 128,
-    u1: "Kira",
-    u2: "Neo",
-    u3: "Bouh",
-    u4: "Tricheur",
+    time: 7,
+    u1: "DreamExe",
+    u2: "e-Niem",
+    u3: "TurtleSmoke",
+    u4: "Vivi",
     when: 1559509518
   }
 ];
@@ -39,3 +37,5 @@ r.db("tesseract")
   .table("scores")
   .insert(obj[1])
   .run();
+*/
+r.db("tesseract").table("users").update({"icon": 548}).run()

@@ -15,7 +15,7 @@ exports.r = r;
 
 const server = Hapi.server({
   port: 3001,
-  host: "127.0.0.1",
+  host: "51.75.251.73",
   routes: {
     cors: {
       origin: ["*"]
