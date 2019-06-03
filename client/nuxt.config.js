@@ -16,10 +16,13 @@ module.exports = {
     script: [
       {
         src: '/fa.js'
-      } /*,
+      },
       {
-        src: '/bulma.js'
-      } */
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'
+      },
+      {
+        src: 'custom.js'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
